@@ -28,6 +28,13 @@ class line_comparison
 		length_L2=(float)Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3,2));
 		String L2=String.valueOf(length_L2);   
 		System.out.println("Length is " + length_L2  + '\n');
-        System.out.println("Lenght of line 1 and line 2  isEquals "+L1.equals(L2));
+		
+		int length_compare = L1.compareTo( L2 );
+		if(length_compare>0)
+			System.out.println("Length of line L1 is greater than line L2  " );
+		else if(length_compare<0)
+			System.out.println("Length of line L1 is smaller than line L2  " );
+		else
+			System.out.println("Length of line L1 is equal to line L2  " );
 	}
 }
