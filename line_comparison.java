@@ -36,7 +36,7 @@ class line_comparison
     line1.setCo_ordinates(1);
     float length_line1=line1.get_length();
     System.out.println("Length Line 1 is " + length_line1+'\n');
-    String length_l=String.valueOf(length_line1); 
+    String length_1=String.valueOf(length_line1); 
 
     Co_ordinates line2=new Co_ordinates();
     line2.setCo_ordinates(2);
@@ -44,6 +44,12 @@ class line_comparison
     System.out.println("Length Line 2 is " + length_line2+'\n');
     String length_2=String.valueOf(length_line2); 
 
-        System.out.println("Lenght of line 1 and line 2  isEquals "+length_l.equals(length_2));
+    int length_compare = length_1.compareTo(length_2);
+		if(length_compare>0)
+			System.out.println("Length of line 1 is greater than line 2  " );
+		else if(length_compare<0)
+			System.out.println("Length of line 1 is smaller than line 2  " );
+		else
+			System.out.println("Length of line 1 is equal to line 2  " );
 	}
 }
